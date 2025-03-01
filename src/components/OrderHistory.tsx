@@ -11,12 +11,20 @@ const OrderHistory: React.FC<OrderHistoryProps> = ({ orders, isDarkMode }) => {
   // Format date to readable format
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return new Intl.DateTimeFormat('en-US', {
+    return new Intl.DateTimeFormat('en-IN', {
       month: 'short',
       day: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
     }).format(date);
+  };
+
+  const formatCurrency = (amount: number) => {
+    return new Intl.NumberFormat('en-IN', {
+      style: 'currency',
+      currency: 'INR',
+      minimumFractionDigits: 2
+    }).format(amount);
   };
 
   return (
@@ -45,7 +53,7 @@ const OrderHistory: React.FC<OrderHistoryProps> = ({ orders, isDarkMode }) => {
                 
                 <div className="text-right">
                   {order.totalAmount && (
-                    <span className="font-bold">${order.totalAmount.toFixed(2)}</span>
+                    <span className="font-bold">{formatCurrency(order.totalAmount + 87.41)}</span>
                   )}
                   <p className={`text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
                     {order.items} {order.items === 1 ? 'item' : 'items'}

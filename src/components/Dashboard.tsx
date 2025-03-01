@@ -10,7 +10,7 @@ const Dashboard: React.FC<DashboardProps> = ({ isDarkMode }) => {
     <div className={`${isDarkMode ? 'bg-gray-800' : 'bg-white'} rounded-xl shadow-md p-6`}>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
         <div>
-          <h1 className="text-2xl font-bold">Welcome back, Alex!</h1>
+          <h1 className="text-2xl font-bold">Welcome back, User!</h1>
           <p className={`mt-1 ${isDarkMode ? 'text-gray-300' : 'text-gray-500'}`}>
             Track your food delivery in real-time
           </p>
