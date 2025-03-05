@@ -101,6 +101,7 @@ function App() {
     };
     
     setRecentOrders([newOrder, ...recentOrders]);
+    // Should update order history once order is completed but adding this for consistency
     setOrderHistory([newOrder, ...recentOrders]);
   };
 
