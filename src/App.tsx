@@ -101,6 +101,7 @@ function App() {
     };
     
     setRecentOrders([newOrder, ...recentOrders]);
+    setOrderHistory([newOrder, ...recentOrders]);
   };
 
   const [isDarkMode, setIsDarkMode] = useState(false);
