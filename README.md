@@ -38,11 +38,11 @@ src/
 1. Clone the repository
 2. Install dependencies:
    ```
-   npm install
+   yarn install
    ```
 3. Start the development server:
    ```
-   npm run dev
+   yarn dev
    ```
 4. Open your browser to the URL shown in the terminal
 
